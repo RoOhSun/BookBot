@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import requests
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Route for Dialogflow fulfillment
 @app.route('/fulfillment', methods=['POST'])
@@ -40,5 +40,5 @@ def fulfillment():
         })
 
 # Run the Flask app
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(port=5000, debug=True)
