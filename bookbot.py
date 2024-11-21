@@ -3,6 +3,12 @@ import requests
 
 app = Flask(__name__)
 
+#Route for student number
+@app.route('/')
+def home():
+    return jsonify({"student_number": "200575702"})
+
+
 # Route for Dialogflow fulfillment
 @app.route('/fulfillment', methods=['POST'])
 def fulfillment():
