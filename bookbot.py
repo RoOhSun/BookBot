@@ -6,7 +6,12 @@ app = Flask(__name__)
 #Route for student number
 @app.route('/')
 def home():
-    return jsonify({"student_number": "200575702"})
+    return jsonify({
+        "student_name": "Roshan Khatri" , 
+        "student_number": "200575702"
+        
+    })
+
 
 
 # Route for Dialogflow fulfillment
